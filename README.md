@@ -2,7 +2,7 @@
 
 Icon library for the Solana ecosystem. Like Font Awesome or Lucide, but for Solana projects.
 
-**🌐 [View all icons](https://preview-metasal.vercel.app)** | [GitHub](https://github.com/metasolbot/solana-icons)
+**🌐 [View all icons](https://solana-icons.vercel.app)** | [GitHub](https://github.com/metasolbot/solana-icons)
 
 ## Features
 
@@ -48,7 +48,7 @@ A comprehensive, open-source icon set covering:
 ## Usage
 
 **Option 1: Web Interface (Easiest)**
-1. Visit [preview-metasal.vercel.app](https://preview-metasal.vercel.app)
+1. Visit [solana-icons.vercel.app](https://solana-icons.vercel.app)
 2. Click any icon
 3. Choose: Copy SVG, Download SVG, or Download PNG
 
