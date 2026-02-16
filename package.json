@@ -1,28 +1,58 @@
 {
   "name": "solana-icons",
   "version": "0.1.0",
-  "description": "Icon library for Solana ecosystem projects",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "Open-source icon library for the Solana ecosystem",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./svg/*": "./svg/*",
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist",
-    "svg"
+    "svg",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "build": "echo 'Build scripts coming soon'",
-    "dev": "echo 'Dev mode coming soon'"
+    "build": "node scripts/build.js",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "solana",
     "icons",
     "svg",
     "react",
-    "web3"
+    "web3",
+    "crypto",
+    "blockchain"
   ],
   "author": "Metasal",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/metasolbot/solana-icons"
+    "url": "https://github.com/metasal1/solana-icons"
+  },
+  "homepage": "https://solana-icons.vercel.app",
+  "bugs": {
+    "url": "https://github.com/metasal1/solana-icons/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   }
 }

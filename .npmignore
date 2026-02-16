@@ -1,0 +1,19 @@
+# Development files
+preview/
+scripts/
+.git/
+.github/
+.vercel/
+.vercel-trigger
+
+# Build outputs (will be in dist/)
+node_modules/
+
+# Documentation for website
+*.md
+!README.md
+
+# Config files
+.gitignore
+.eslintrc
+tsconfig.json

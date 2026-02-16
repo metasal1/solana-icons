@@ -40,25 +40,56 @@ A comprehensive, open-source icon set covering:
 **Infrastructure (1):**
 - ✅ Triton
 
+## Installation
+
+```bash
+npm install solana-icons
+```
+
 ## Usage
 
-**Option 1: Web Interface (Easiest)**
+**Option 1: npm Package**
+
+```javascript
+// Import all icons
+import { icons, categories } from 'solana-icons';
+
+// Get a specific icon
+const phantomIcon = icons['wallets/phantom'];
+console.log(phantomIcon.svg); // SVG string
+
+// Use in React
+function MyComponent() {
+  return (
+    <div dangerouslySetInnerHTML={{ __html: phantomIcon.svg }} />
+  );
+}
+
+// List all icons
+Object.keys(icons).forEach(key => {
+  console.log(key); // e.g., "wallets/phantom"
+});
+```
+
+**Option 2: Direct SVG Import**
+
+```javascript
+// Import raw SVG file
+import phantomSvg from 'solana-icons/svg/wallets/phantom.svg';
+```
+
+**Option 3: Web Interface**
 1. Visit [solana-icons.vercel.app](https://solana-icons.vercel.app)
 2. Click any icon
 3. Choose: Copy SVG, Download SVG, or Download PNG
 
-**Option 2: Direct from GitHub**
+**Option 4: Direct from GitHub**
 ```bash
 # Clone the repo
-git clone https://github.com/metasolbot/solana-icons.git
+git clone https://github.com/metasal1/solana-icons.git
 
 # SVG files are in svg/ directory
 cd solana-icons/svg/wallets
-```
-
-**Option 3: Coming Soon**
-```bash
-npm install solana-icons
 ```
 
 ## Categories
