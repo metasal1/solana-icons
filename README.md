@@ -4,6 +4,13 @@ Icon library for the Solana ecosystem. Like Font Awesome or Lucide, but for Sola
 
 **🌐 [View all icons](https://preview-metasal.vercel.app)** | [GitHub](https://github.com/metasolbot/solana-icons)
 
+## Features
+
+✨ **Click any icon to:**
+- 📋 Copy SVG code
+- ⬇️ Download SVG file
+- 🖼️ Download PNG (512px)
+
 ## Vision
 
 A comprehensive, open-source icon set covering:
@@ -37,6 +44,27 @@ A comprehensive, open-source icon set covering:
 - ✅ Bitget Wallet
 - ✅ Trezor
 - ✅ WalletConnect
+
+## Usage
+
+**Option 1: Web Interface (Easiest)**
+1. Visit [preview-metasal.vercel.app](https://preview-metasal.vercel.app)
+2. Click any icon
+3. Choose: Copy SVG, Download SVG, or Download PNG
+
+**Option 2: Direct from GitHub**
+```bash
+# Clone the repo
+git clone https://github.com/metasolbot/solana-icons.git
+
+# SVG files are in svg/ directory
+cd solana-icons/svg/wallets
+```
+
+**Option 3: Coming Soon**
+```bash
+npm install solana-icons
+```
 
 ## Categories
 
