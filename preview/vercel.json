@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cp -r ../svg/* public/svg/ && mkdir -p public/webp && cp -r ../webp/* public/webp/ && npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm install"
