@@ -67,7 +67,7 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
           onMouseEnter={() => setHoveredIcon(icon.name)}
           onMouseLeave={() => setHoveredIcon(null)}
         >
-          <div className="aspect-square bg-gray-900/30 hover:bg-gray-800/50 border border-gray-800/50 hover:border-gray-700 rounded-lg transition-all duration-200 cursor-pointer relative">
+          <div className="aspect-square bg-gray-100 hover:bg-gray-200 dark:bg-gray-900/30 dark:hover:bg-gray-800/50 border border-gray-200 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 rounded-lg transition-all duration-200 cursor-pointer relative">
             {/* Icon */}
             <div className="absolute inset-0 flex items-center justify-center p-2">
               <div 
@@ -77,7 +77,7 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
             </div>
 
             {/* Action buttons (show on hover) */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900/90 rounded-lg">
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-white/95 dark:bg-gray-900/90 rounded-lg">
               <div className="flex flex-col gap-1 w-full px-2">
                 <button
                   onClick={() => copyToClipboard(icon.svg, icon.name)}
@@ -90,13 +90,13 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
                 </button>
                 <button
                   onClick={() => downloadSvg(icon.svg, icon.name)}
-                  className="w-full px-2 py-1.5 bg-gray-700 hover:bg-gray-600 text-white rounded text-[10px] transition flex items-center justify-center gap-1"
+                  className="w-full px-2 py-1.5 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-[10px] transition flex items-center justify-center gap-1"
                 >
                   SVG
                 </button>
                 <button
                   onClick={() => downloadPng(icon.svg, icon.name, 512)}
-                  className="w-full px-2 py-1.5 bg-gray-700 hover:bg-gray-600 text-white rounded text-[10px] transition flex items-center justify-center gap-1"
+                  className="w-full px-2 py-1.5 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-[10px] transition flex items-center justify-center gap-1"
                 >
                   PNG
                 </button>
@@ -113,7 +113,7 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
           
           {/* Icon name label */}
           <div className="mt-1 text-center px-1">
-            <span className="text-[10px] text-gray-400 truncate block">{icon.name}</span>
+            <span className="text-[10px] text-gray-600 dark:text-gray-400 truncate block">{icon.name}</span>
           </div>
         </div>
       ))}

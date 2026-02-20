@@ -46,9 +46,9 @@ export default async function Home() {
   const compactIcons = icons.filter(i => i.category !== 'platforms');
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0a] relative overflow-hidden">
       {/* Floating icon background pattern */}
-      <div className="fixed inset-0 opacity-[0.03] pointer-events-none">
+      <div className="fixed inset-0 opacity-[0.03] dark:opacity-[0.03] pointer-events-none">
         <div className="grid grid-cols-12 gap-8 p-8">
           {compactIcons.slice(0, 144).map((icon, i) => (
             <div 
