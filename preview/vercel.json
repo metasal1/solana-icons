@@ -1,3 +1,0 @@
-{
-  "buildCommand": "mkdir -p public/svg public/brand && cp -r ../svg/* public/svg/ && npm run build"
-}
