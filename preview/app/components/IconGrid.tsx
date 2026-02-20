@@ -59,30 +59,22 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
   };
 
   return (
-    <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-1">
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2">
       {icons.map((icon) => (
         <div
           key={icon.path}
-          className="relative group aspect-square"
+          className="relative group flex flex-col"
           onMouseEnter={() => setHoveredIcon(icon.name)}
           onMouseLeave={() => setHoveredIcon(null)}
         >
-          <div className="absolute inset-0 bg-gray-900/30 hover:bg-gray-800/50 border border-gray-800/50 hover:border-gray-700 rounded-lg transition-all duration-200 cursor-pointer">
+          <div className="aspect-square bg-gray-900/30 hover:bg-gray-800/50 border border-gray-800/50 hover:border-gray-700 rounded-lg transition-all duration-200 cursor-pointer relative">
             {/* Icon */}
             <div className="absolute inset-0 flex items-center justify-center p-2">
               <div 
-                className="w-full h-full max-w-[28px] max-h-[28px] transition-transform group-hover:scale-110 [&>svg]:w-full [&>svg]:h-full [&>svg]:object-contain"
+                className="w-full h-full max-w-[32px] max-h-[32px] transition-transform group-hover:scale-110 [&>svg]:w-full [&>svg]:h-full [&>svg]:object-contain"
                 dangerouslySetInnerHTML={{ __html: icon.svg }}
               />
             </div>
-
-            {/* Icon name tooltip */}
-            {hoveredIcon === icon.name && (
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap z-30 pointer-events-none shadow-xl border border-gray-700">
-                {icon.name}
-                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 border-r border-b border-gray-700 rotate-45"></div>
-              </div>
-            )}
 
             {/* Action buttons (show on hover) */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900/90 rounded-lg">
@@ -117,6 +109,11 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
                 <span className="text-white text-xs font-medium">✓ Copied!</span>
               </div>
             )}
+          </div>
+          
+          {/* Icon name label */}
+          <div className="mt-1 text-center px-1">
+            <span className="text-[10px] text-gray-400 truncate block">{icon.name}</span>
           </div>
         </div>
       ))}
