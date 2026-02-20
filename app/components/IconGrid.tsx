@@ -33,7 +33,7 @@ function LazyIcon({ icon, onClick }: { icon: Icon; onClick: () => void }) {
 
   useEffect(() => {
     if (isVisible && !svgContent && icon.path) {
-      fetch(`/${icon.path}`)
+      fetch(icon.path)
         .then(res => res.text())
         .then(svg => setSvgContent(svg))
         .catch(() => setSvgContent('<svg></svg>'));
@@ -75,7 +75,7 @@ export function IconGrid({ icons }: { icons: Icon[] }) {
   const openModal = async (icon: Icon) => {
     setSelectedIcon(icon);
     if (icon.path) {
-      const svg = await fetch(`/${icon.path}`).then(res => res.text());
+      const svg = await fetch(icon.path).then(res => res.text());
       setSelectedSvg(svg);
     }
   };
