@@ -1,5 +1,6 @@
-import fs from 'fs';
-import path from 'path';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { IconGrid } from './components/IconGrid';
 import { SearchHeader } from './components/SearchHeader';
 
@@ -9,36 +10,28 @@ interface Icon {
   path: string;
 }
 
-async function getIconsMeta(): Promise<{ icons: Icon[]; categories: string[] }> {
-  const svgDir = path.join(process.cwd(), 'public', 'svg');
-  const icons: Icon[] = [];
-  
-  const categories = fs.readdirSync(svgDir).filter(item => {
-    const itemPath = path.join(svgDir, item);
-    return fs.statSync(itemPath).isDirectory();
-  });
+export default function Home() {
+  const [icons, setIcons] = useState<Icon[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  for (const category of categories) {
-    const categoryPath = path.join(svgDir, category);
-    const files = fs.readdirSync(categoryPath).filter(file => file.endsWith('.svg'));
-    
-    for (const file of files) {
-      icons.push({
-        name: file.replace('.svg', ''),
-        category,
-        path: `/svg/${category}/${file}`
+  useEffect(() => {
+    fetch('/api/icons')
+      .then(res => res.json())
+      .then(data => {
+        setIcons(data.icons);
+        setCategories(data.categories);
+        setLoading(false);
       });
-    }
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-[#0a0a0a] flex items-center justify-center">
+        <div className="text-gray-600 dark:text-gray-400">Loading icons...</div>
+      </div>
+    );
   }
-
-  return {
-    icons,
-    categories: Array.from(new Set(icons.map(i => i.category))).sort()
-  };
-}
-
-export default async function Home() {
-  const { icons, categories } = await getIconsMeta();
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a] relative overflow-hidden">
