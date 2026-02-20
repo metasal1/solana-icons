@@ -1,5 +1,38 @@
+# Dependencies
 node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build outputs
 dist
+package/dist
+/.next/
+/out/
+/build
+
+# Testing
+/coverage
+
+# Misc
 .DS_Store
+*.pem
 *.log
-.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment
+.env*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

@@ -1,160 +1,36 @@
-# Solana Icons
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Icon library for the Solana ecosystem. Like Font Awesome or Lucide, but for Solana projects.
+## Getting Started
 
-**🌐 [View all icons](https://solana-icons.vercel.app)** | [GitHub](https://github.com/metasolbot/solana-icons)
-
-## Features
-
-✨ **Click any icon to:**
-- 📋 Copy SVG code
-- ⬇️ Download SVG file
-- 🖼️ Download PNG (512px)
-
-## Vision
-
-A comprehensive, open-source icon set covering:
-- **Wallets**: Phantom, Backpack, Solflare, etc.
-- **DEXes**: Jupiter, Raydium, Orca, Meteora, etc.
-- **Protocols**: Marinade, Jito, Sanctum, Kamino, etc.
-- **NFT Platforms**: Magic Eden, Tensor, Metaplex, etc.
-- **Infrastructure**: Helius, Triton, QuickNode, etc.
-- **Payments**: Solana Pay, TipLink, Sphere, etc.
-- **Gaming**: Star Atlas, Genopets, Aurory, etc.
-- **Social**: Dialect, Clawbook, Only1, etc.
-- **Core Concepts**: SOL token, staking, compressed NFTs, Blinks, etc.
-
-## Status
-
-🚧 **Early Development** - 16 icons added, more coming soon!
-
-**Current Icons:**
-
-**Wallets (15):**
-- ✅ Phantom, Backpack, Solflare, Coinbase
-- ✅ TipLink, Coin98, Trust Wallet
-- ✅ Magic Eden Wallet, Jupiter Wallet
-- ✅ Ledger, Wallet12, OKX Wallet
-- ✅ Bitget Wallet, Trezor, WalletConnect
-
-**Infrastructure (1):**
-- ✅ Triton
-
-## Installation
+First, run the development server:
 
 ```bash
-npm install solana-icons
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Usage
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Option 1: npm Package**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```javascript
-// Import all icons
-import { icons, categories } from 'solana-icons';
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-// Get a specific icon
-const phantomIcon = icons['wallets/phantom'];
-console.log(phantomIcon.svg); // SVG string
+## Learn More
 
-// Use in React
-function MyComponent() {
-  return (
-    <div dangerouslySetInnerHTML={{ __html: phantomIcon.svg }} />
-  );
-}
+To learn more about Next.js, take a look at the following resources:
 
-// List all icons
-Object.keys(icons).forEach(key => {
-  console.log(key); // e.g., "wallets/phantom"
-});
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Option 2: Direct SVG Import**
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```javascript
-// Import raw SVG file
-import phantomSvg from 'solana-icons/svg/wallets/phantom.svg';
-```
+## Deploy on Vercel
 
-**Option 3: Web Interface**
-1. Visit [solana-icons.vercel.app](https://solana-icons.vercel.app)
-2. Click any icon
-3. Choose: Copy SVG, Download SVG, or Download PNG
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-**Option 4: Direct from GitHub**
-```bash
-# Clone the repo
-git clone https://github.com/metasal1/solana-icons.git
-
-# SVG files are in svg/ directory
-cd solana-icons/svg/wallets
-```
-
-## Categories
-
-```
-svg/
-├── wallets/        (15 icons) ✅
-├── infrastructure/ (1 icon) ✅
-├── dexes/          (coming soon)
-├── protocols/      (coming soon)
-├── nft/            (coming soon)
-├── payments/       (coming soon)
-├── gaming/         (coming soon)
-├── social/         (coming soon)
-└── core/           (coming soon)
-```
-
-See each category's README for wanted icons.
-
-## Platform Icons (Jupiter Platform List)
-
-**346 platform logos** sourced from [jup-ag/platform-list](https://github.com/jup-ag/platform-list/tree/main/img) — covering all major Solana DeFi protocols, DEXes, and apps.
-
-Available in two formats:
-
-| Format | Location | Description |
-|--------|----------|-------------|
-| WebP | `webp/platforms/` | Original quality WebP files |
-| SVG | `svg/platforms/` | SVG wrappers with embedded PNG (works everywhere SVG is accepted) |
-
-### Usage
-
-```js
-import { webpIcons } from 'solana-icons';
-
-// Access a platform icon by key
-const jupiter = webpIcons['platforms/jupiter'];
-// => { name: 'jupiter', category: 'platforms', webp: '<base64>' }
-
-// Use as an image src
-const imgSrc = `data:image/webp;base64,${jupiter.webp}`;
-```
-
-Or use the SVG files directly:
-
-```html
-<img src="https://raw.githubusercontent.com/metasal1/solana-icons/main/webp/platforms/jupiter.webp" />
-```
-
-## Planned Features
-
-- ✅ SVG source files
-- ✅ Organized categories
-- ✅ WebP platform icons (346 from Jupiter platform-list)
-- ✅ npm package
-- ⬜ React components
-- ⬜ Vue components
-- ⬜ Web font
-- ⬜ CDN hosting
-- ⬜ Figma plugin
-
-## Contributing
-
-Icon requests and contributions welcome! Open an issue or submit a PR.
-
-## License
-
-MIT
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
