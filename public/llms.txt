@@ -1,18 +1,20 @@
 # Solana Icons
 
-> Open-source icon library for the Solana ecosystem.
+> Open-source icon library for the Solana ecosystem. Free SVG and PNG downloads.
 
 - Site: https://icons.sol.new
 - npm: `npm i solana-icons`
 - License: MIT
-- Icons: 370+ SVG/PNG (wallets, platforms, brand, infrastructure)
+- Icons: 567+ (wallets, DEXes, platforms, protocols, brand)
+- Includes: Phantom, Solflare, Backpack, Jupiter (jup.ag), BONK, pump.fun, FOMO, Raydium, Orca, Kamino, QuickNode, Alchemy
 - GitHub: https://github.com/metasal1/solana-icons
+- Source extras: Solana Foundation ecosystem-data company assets
 
 ## Use
 
-- Browse and download SVG/PNG on the website
-- Install package for React/app usage
-- Request icons via GitHub issues
+- Browse and **download as PNG image** (128/256/512)
+- Copy SVG or download SVG code
+- Install package for app usage
 
 ## Key URLs
 
@@ -20,3 +22,8 @@
 - https://icons.sol.new/llms-full.txt
 - https://icons.sol.new/sitemap.xml
 - https://icons.sol.new/images/opengraph.png
+- https://icons.sol.new/svg/wallets/phantom.svg
+- https://icons.sol.new/svg/dexes/jupiter.svg
+- https://icons.sol.new/svg/platforms/bonk.svg
+- https://icons.sol.new/svg/dexes/pump-fun.svg
+- https://icons.sol.new/svg/platforms/fomo.svg
