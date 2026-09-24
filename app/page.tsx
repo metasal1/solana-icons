@@ -22,9 +22,14 @@ export default function Home() {
         url: siteUrl,
         name: "Solana Icons",
         description:
-          "Open-source icon library for the Solana ecosystem. Free SVG and PNG downloads.",
+          "Open-source Solana icon library. Free SVG and PNG downloads for Phantom, Jupiter, BONK, pump.fun, wallets, DEXes, and ecosystem brands.",
         inLanguage: "en",
         publisher: { "@id": `${siteUrl}/#org` },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${siteUrl}/?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "Organization",
@@ -40,13 +45,24 @@ export default function Home() {
         operatingSystem: "Web",
         url: siteUrl,
         description:
-          "Community open-source icon pack for Solana wallets, DEXes, platforms, and brand marks.",
+          "Community open-source icon pack for Solana wallets, DEXes, platforms, and brand marks. Download as PNG or SVG.",
         offers: {
           "@type": "Offer",
           price: "0",
           priceCurrency: "USD",
         },
         downloadUrl: "https://www.npmjs.com/package/solana-icons",
+      },
+      {
+        "@type": "ItemList",
+        name: "Solana icon categories",
+        numberOfItems: categories.length,
+        itemListElement: categories.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c,
+          url: siteUrl,
+        })),
       },
     ],
   };
@@ -58,7 +74,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="sr-only">
-        Solana Icons — open-source SVG and PNG icon library for the Solana ecosystem
+        Solana Icons — free SVG and PNG logos for Phantom, Jupiter, BONK, pump.fun,
+        Backpack, Solflare, FOMO, and 500+ Solana projects
       </h1>
       <SearchHeader icons={icons} categories={categories} />
     </div>

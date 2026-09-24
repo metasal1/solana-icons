@@ -1,37 +1,51 @@
 # Solana Icons — full reference
 
-Open-source icon library for Solana projects. Free SVG and PNG downloads. MIT license.
+Open-source icon library for Solana projects. Free SVG and PNG downloads. MIT license. Canonical host **https://icons.sol.new** (Cloudflare Workers only).
 
 ## Product
 
-- Canonical host: https://icons.sol.new
-- Worker: Cloudflare OpenNext (`solana-icons`)
-- Legacy Vercel: https://solana-icons.vercel.app (prefer icons.sol.new)
+- Canonical: https://icons.sol.new
+- Worker: `solana-icons` · https://solana-icons.gm-4e8.workers.dev
 - Package: npm `solana-icons`
 - Repo: https://github.com/metasal1/solana-icons
+- ~567 unique icons · 11 categories
 
-## Categories (non-empty)
+## Notable logos
 
-- brand — Solana brand marks, Powered by Solana, Kingmade by Solana, OPOS
-- wallets — Phantom, Solflare, Backpack, and more
-- platforms — Jupiter family, DEXes, infra, ecosystem apps
-- infrastructure
+| Project | Path |
+|---------|------|
+| Phantom | `/svg/wallets/phantom.svg` |
+| Solflare | `/svg/wallets/solflare.svg` |
+| Backpack | `/svg/wallets/backpack.svg` |
+| Jupiter / jup.ag | `/svg/dexes/jupiter.svg` `/svg/dexes/jup.svg` |
+| pump.fun | `/svg/dexes/pump-fun.svg` |
+| BONK | `/svg/platforms/bonk.svg` |
+| FOMO | `/svg/platforms/fomo.svg` |
+| stonkfun | `/svg/platforms/stonkfun.svg` |
+| Raydium | `/svg/dexes/raydium.svg` |
+| Orca | `/svg/dexes/orca.svg` |
+| Kamino | `/svg/protocols/kamino.svg` |
+
+Also: Alchemy, QuickNode, Stripe, Circle, Metaplex, Tensor, Drift, Jito, Sanctum, and 500+ more from Jupiter platform-list + Solana Foundation ecosystem-data.
+
+## Categories
+
+brand, core, dexes, gaming, infrastructure, nft, payments, platforms, protocols, social, wallets
 
 ## Features
 
 - Search + category filters
-- Modal preview with prev/next
-- Copy SVG, download SVG, download PNG (128/256/512, clear/white/dark)
-- Lazy-loaded grid
+- Modal prev/next
+- Download as PNG image (128/256/512, clear/white/dark)
+- Copy SVG / SVG code
 
-## For agents / integrations
+## For agents
 
-- Prefer SVG paths under `/svg/{category}/{name}.svg`
-- Brand assets under `/svg/brand/`
-- OG share image: `/images/opengraph.png`
-- Do not scrape every SVG in one crawl burst; use search UX or npm package
+- SVG: `/svg/{category}/{name}.svg`
+- Do not burst-download the whole tree
+- OG: `/images/opengraph.png`
 
-## Contact / contribute
+## Contribute
 
 - Issues: https://github.com/metasal1/solana-icons/issues
-- Contributing: https://github.com/metasal1/solana-icons/blob/main/CONTRIBUTING.md
+- CONTRIBUTING.md in the repo

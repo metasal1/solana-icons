@@ -10,48 +10,54 @@ const GA_ID = "G-L014ZQRPKS";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Solana Icons - Open Source Icon Library for Solana Ecosystem",
+  title: "Solana Icons — free SVG and PNG logos (Phantom, Jupiter, BONK, pump.fun)",
   description:
-    "Open-source icon library for the Solana ecosystem. 370+ free SVG and PNG icons — wallets, DEXes, platforms, brand marks, and more.",
+    "Open-source Solana icon library. 567+ free SVG and PNG downloads: Phantom, Solflare, Backpack, Jupiter, BONK, pump.fun, FOMO, Raydium, Orca, and 500 more wallets, DEXes, and ecosystem brands.",
   keywords: [
     "Solana icons",
     "Solana SVG",
-    "crypto icons",
-    "wallet icons",
-    "Jupiter icon",
+    "Solana PNG",
     "Phantom icon",
+    "Solflare icon",
+    "Backpack wallet icon",
+    "Jupiter jup.ag icon",
+    "BONK logo",
+    "pump.fun icon",
+    "FOMO family icon",
+    "Raydium icon",
+    "crypto icon pack",
     "open source icons",
   ],
   authors: [{ name: "Metasal", url: "https://metasal.xyz" }],
   openGraph: {
-    title: "Solana Icons",
+    title: "Solana Icons — 567+ free SVG & PNG logos",
     description:
-      "Open-source icon library for the Solana ecosystem — 370+ icons, free SVG & PNG",
+      "Phantom, Jupiter, BONK, pump.fun, Backpack, Solflare, FOMO and 500+ more. Download as image.",
     type: "website",
     url: siteUrl,
     siteName: "Solana Icons",
     locale: "en_US",
     images: [
       {
-        url: "/images/opengraph.png?v=3",
+        url: "/images/opengraph.png?v=4",
         width: 1200,
         height: 630,
-        alt: "Solana Icons — open-source icon library for the Solana ecosystem",
+        alt: "Solana Icons — Phantom Jupiter BONK pump.fun Backpack Solflare FOMO",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solana Icons",
+    title: "Solana Icons — 567+ free SVG & PNG logos",
     description:
-      "Open-source icon library for the Solana ecosystem — 370+ icons, free SVG & PNG",
+      "Phantom, Jupiter, BONK, pump.fun, Backpack, Solflare, FOMO and 500+ more.",
     images: [
       {
-        url: "/images/opengraph.png?v=3",
+        url: "/images/opengraph.png?v=4",
         width: 1200,
         height: 630,
-        alt: "Solana Icons — open-source icon library for the Solana ecosystem",
+        alt: "Solana Icons — Phantom Jupiter BONK pump.fun Backpack Solflare FOMO",
       },
     ],
   },
