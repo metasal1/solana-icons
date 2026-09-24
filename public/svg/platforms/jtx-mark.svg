@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Follows the OS/browser color scheme (not the in-app theme toggle —
+       favicons are painted by browser chrome and can't read app CSS). */
+    path { fill: #101010; } /* light mode: black mark */
+    @media (prefers-color-scheme: dark) {
+      path { fill: #F2F1EE; } /* dark mode: white mark */
+    }
+  </style>
+  <path d="M4 5.43866H15.5456V12.5019C15.5456 15.8197 12.6313 18.5242 9.58659 18.5242H4.00931V22H9.38176C15.257 22 19 17.3532 19 12.7621V2L4.00931 2V5.43866H4Z"/>
+</svg>
